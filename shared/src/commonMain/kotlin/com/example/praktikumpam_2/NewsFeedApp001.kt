@@ -8,7 +8,7 @@ data class NewsItem(val id: Int, val title: String, val category: String)
 class NewsFeedRepository {
 
     fun getNewsStream(): Flow<NewsItem> = flow {
-        val categories = listOf("ITERA", "Informatika", "Pengembangan Aplikasi Mobile")
+        val categories = listOf("ITERA", "Informatika", "Pengembangan Aplikasi Mobile", "Galih")
         var id = 1
         while (true) {
             delay(2000)
@@ -51,8 +51,8 @@ fun main() = runBlocking {
 
     val newsJob = launch {
         repository.getNewsStream()
-            .filter { news -> news.category == "Teknologi" }
-            .map { news -> "[NEWS TEKNOLOGI] ${news.title}" }
+            .filter { news -> news.category == "Informatika" }
+            .map { news -> "[NEWS Informatika] ${news.title}" }
             .catch { e -> println("Error pada stream: ${e.message}") }
             .collect { formattedNews ->
                 println(" Berita Masuk: $formattedNews")
@@ -66,7 +66,7 @@ fun main() = runBlocking {
     }
 
 
-    delay(10000)
+    delay(20000)
     newsJob.cancel()
     readTrackerJob.cancel()
     println("--- Simulation Ended ---")
