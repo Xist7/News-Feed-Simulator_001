@@ -1,30 +1,20 @@
-This is a Kotlin Multiplatform project targeting Android, Desktop (JVM).
+## 🚀 Cara Menjalankan Program
 
-* [/shared](./shared/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./shared/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./shared/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./shared/src/jvmMain/kotlin)
-    folder is the appropriate location.
+Proyek ini dibangun menggunakan template Kotlin Multiplatform (KMP) :
 
-### Running the apps
+### Cara: Menggunakan Terminal Android Studio
 
-Use the run configurations provided by the run widget in your IDE's toolbar. You can also use these commands and options:
-
-- Android app: `./gradlew :androidApp:assembleDebug`
-- Desktop app:
-  - Hot reload: `./gradlew :desktopApp:hotRun --auto`
-  - Standard run: `./gradlew :desktopApp:run`
-
-### Running tests
-
-Use the run button in your IDE's editor gutter, or run tests using Gradle tasks:
-
-- Android tests: `./gradlew :shared:testAndroidHostTest`
-- Desktop tests: `./gradlew :shared:jvmTest`
-
----
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+1. Buka proyek ini di **Android Studio**.
+2. Buka tab **Terminal** di bagian bawah IDE
+.
+3. Jalankan perintah berikut lalu tekan **Enter**:
+   * **Windows (PowerShell / CMD):**
+     ```bash
+     .\gradlew :desktopApp:run
+     ```
+   * **macOS / Linux:**
+     ```bash
+     ./gradlew :desktopApp:run
+     ```
+4. Aplikasi Desktop akan terbuka dan simulasi berita akan langsung.
+5. <img width="1917" height="1002" alt="PAM 2 1" src="https://github.com/user-attachments/assets/a162ad26-8edb-4183-b78a-ff8f677de421" />
