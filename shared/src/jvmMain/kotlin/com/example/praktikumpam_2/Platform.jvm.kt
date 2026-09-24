@@ -1,4 +1,4 @@
-package com.example.praktikumpam_2
+qpackage com.example.praktikumpam_2
 
 class JVMPlatform: Platform {
     override val name: String = "Java ${System.getProperty("java.version")}"
